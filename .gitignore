@@ -1,0 +1,13 @@
+# content
+
+# idea
+/.idea/*
+
+/builder/*
+
+bower.json
+webpack.config.*
+bower_components/*
+node_modules/*
+
+# c++

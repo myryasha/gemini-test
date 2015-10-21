@@ -1,0 +1,135 @@
+@import "reset.css";
+@import "varibles";
+@import "core";
+
+/*Отсюда уже выстраивается модуль */
+.module-wrapper {
+  width: 100%;
+  min-width: 830px;
+  max-width: 1280px;
+  height: 100%;
+  background-color: $gray-50;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: $gray-300;
+  overflow: hidden;
+  .left-box, .right-box {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: $pink-900;
+  }
+  .left-box {
+    @include left-sided-icons-bg;
+    background-image: url("../resources/images/logo-slider.svg");
+    background-size: 40px;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #373737;
+  }
+}
+.active-zone {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.subtitle {
+  width: 100%;
+  height: 50px;
+  .subtitle-content {
+    overflow: hidden;
+    height: 50px;
+    width: calc(100% - 50px);
+    display: flex;
+    align-items: center;
+  }
+  .subtitle-text {
+    display: inline-block;
+    font-size: 18px;
+    color: $pink-900;
+    margin: 0 10px;
+  }
+  .icon-question {
+    @include left-sided-icons-bg;
+    background-image: url("../resources/images/question.png");
+    background-size: 30px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }
+}
+.content {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: {
+    direction: column;
+    shrink: 1;
+  }
+  justify-content: space-between;
+}
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: $pink-900;
+}
+.zagl {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .zagl-header {
+    width: 100%;
+    height: 56px;
+    background-color: $pink-900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title {
+      display: block;
+      font-size: 18px;
+      padding: 10px;
+      color: white;
+    }
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
